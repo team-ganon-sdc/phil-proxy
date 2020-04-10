@@ -22,7 +22,6 @@
     "express": "^4.17.1",
     "faker": "~4.1.0",
     "newrelic": "~6.5.0",
-    "node-fetch": "~2.6.0",
     "nodemon": "~2.0.3"
   }
 }
