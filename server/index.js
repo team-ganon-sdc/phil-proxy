@@ -4,27 +4,17 @@ const path = require('path');
 const app = express();
 const port = 3000;
 const fetch = require('node-fetch');
+const axios = require('axios')
 
 // app.use(express.static('public'))
 app.use(express.static(path.join(__dirname, '/../public')));
+app.use(express.json())
 
 app.post('/api/apps', (req, res) => {
 
-  fetch('http://localhost:3001/api/apps', {
-    method: 'post',
-    body: req.body
-  })
-  .then(result => {})
-  .catch(err => console.log(err));
-
-  // axios.post('http://localhost:3001/api/apps', req.body)
-  // .then(function (response) {
-  //   //console.log(response);
-  // })
-  // .catch(function (error) {
-  //  // console.log(error);
-  // });
-
+  axios.post('http://localhost:3001/api/apps', req.body)
+  .then(response => res.json(response.data))
+  .catch(err => res.json(err));
 
 });
 
