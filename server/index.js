@@ -2,7 +2,6 @@ require('newrelic');
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3000;
 const fetch = require('node-fetch');
 const axios = require('axios')
 
@@ -18,4 +17,9 @@ app.post('/api/apps', (req, res) => {
 
 });
 
-app.listen(port, () => console.log(`Proxy server running on port ${port}!`));
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, () => console.log(`Similar Component listening on port ${port}!`));
