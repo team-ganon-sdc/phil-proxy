@@ -9,9 +9,13 @@ const axios = require('axios')
 app.use(express.static(path.join(__dirname, '/../public')));
 app.use(express.json())
 
+app.get('/loaderio-20cb62fbfab9a10c4cd939f99439d3f7.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, '../loaderio-20cb62fbfab9a10c4cd939f99439d3f7.txt'));
+});
+
 app.post('/api/apps', (req, res) => {
 
-  axios.post('http://localhost:3001/api/apps', req.body)
+  axios.post('http://54.212.36.16:3001/api/apps', req.body)
   .then(response => res.json(response.data))
   .catch(err => res.json(err));
 
