@@ -2,7 +2,7 @@ require('newrelic');
 const express = require('express');
 const path = require('path');
 const app = express();
-const fetch = require('node-fetch');
+
 const axios = require('axios')
 
 // app.use(express.static('public'))
