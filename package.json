@@ -19,7 +19,7 @@
   "homepage": "https://github.com/FEC-Group-Link/jon-baltz-proxy#readme",
   "dependencies": {
     "axios": "~0.19.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "faker": "~4.1.0",
     "newrelic": "~6.5.0",
     "nodemon": "~2.0.3"
